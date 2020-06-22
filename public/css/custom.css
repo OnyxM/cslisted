@@ -1,0 +1,47 @@
+.bg-purple{
+	background-color: #5c0352!important;
+}
+.btn.bg-purple{
+	border-color: #5c0352!important;
+}
+
+.product-thumb-overlay{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	z-index: 100;
+	transition: opacity 0.15s 0.15s ease-in-out;
+}
+.product-thumb-overlay:hover{
+	opacity: 1;
+}
+.product-thumb-overlay:hover + img{
+    transform: scale(1.1);
+}
+.product-thumb{
+    overflow:hidden;
+}
+
+.product-gallery{
+    overflow-y:scroll!important;
+}
+.product-thumb>img{
+    object-fit: cover;
+    height:200px!important;
+}
+
+@media screen and ( max-width: 400px ){
+    li.page-item {
+        display: none;
+    }
+    .page-item:first-child,
+    .page-item:nth-child( 2 ),
+    .page-item:nth-last-child( 2 ),
+    .page-item:last-child,
+    .page-item.active,
+    .page-item.disabled {
+
+        display: block;
+    }
+}

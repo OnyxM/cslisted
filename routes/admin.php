@@ -1,0 +1,11 @@
+<?php
+	Route::resource('category','User\CategoryController');
+	Route::resource('city','User\CityController');
+	Route::resource('tag','User\TagController');
+	Route::resource('post_type','User\PostTypeController');
+	Route::resource('page','User\PageController');
+	Route::resource('carousel','User\CarouselController');
+	Route::resource('review','ReviewController')->except('store');
+	Route::post('review/activate/{id}','ReviewController@Activate')->name('review-active');
+	Route::post('review/desactivate/{id}','ReviewController@Desactivate')->name('review-inactive');
+	Route::resource('orders','User\OrderAdminController');
